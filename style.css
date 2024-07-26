@@ -176,7 +176,7 @@ body{
     animation-delay: 0.5s;
 }
 
-@keyframes .fadeIn{
+@keyframes fadeIn{
     to{
         scale: 1;
         opacity: 1;

@@ -15,14 +15,14 @@ search.addEventListener('click', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
-            
+
             if (json.cod === '404') {
                 container.style.height = '400px';
-                weather.style.display = 'none';
+                weatherBox.style.display = 'none';
                 weatherDetails.style.display = 'none';
                 error404.style.display = 'block';
                 error404.classList.add('fadeIn');
-                return,
+                return;
             }
 
             error404.style.display = 'none';
@@ -36,38 +36,42 @@ search.addEventListener('click', () => {
 
             switch (json.weather[0].main) {
                 case 'Clear':
-                    img.src = 'images/clear.png'
+                    image.src = 'images/clear.png';
                     break;
-            
+
                 case 'Rain':
-                    img.src = 'images/rain.png'
+                    image.src = 'images/rain.png';
                     break;
 
                 case 'Snow':
-                    image.src =  'images/snow.png'
+                    image.src = 'images/snow.png';
                     break;
-                
+
                 case 'Clouds':
-                    image.src = 'images/cloud.png'
+                    image.src = 'images/cloud.png';
                     break;
-                
+
                 case 'Haze':
-                    image.src = 'images/mist.org'
+                    image.src = 'images/mist.png';
                     break;
 
                 default:
                     image.src = '';
             }
 
-            temperature.innerHTML = '${parseInt(json.main.temp)}<span> ºC </span>';
-            description.innerHTML = '${json.weather[0].description}';
-            humidity.innerHTML = '${json.main.humidity}%';
-            wind.innerHTML = '${parseInt(json.wind.spedd)km/h';
+            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+            description.innerHTML = `${json.weather[0].description}`;
+            humidity.innerHTML = `${json.main.humidity}%`;
+            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
             weatherBox.style.display = '';
-            weatherDetails.style.display = ''; 
+            weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
-            weather.classList.add('fadeIn') :
-            containter.style.height = '590px'
+            weatherDetails.classList.add('fadeIn');
+            container.style.height = '590px';
+
+
         });
+
+
 });

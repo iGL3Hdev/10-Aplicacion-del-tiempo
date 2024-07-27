@@ -22,7 +22,7 @@ body{
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
-    font-family:'Roboto', sans-serif ;
+    font-family: 'Roboto', sans-serif;
     transition: 0.6s ease-out;
 }
 
@@ -72,16 +72,16 @@ body{
     font-size: 28px;
 }
 
-.wheather-box{
+.weather-box{
     text-align: center;
 }
 
-.wheather-box img{
+.weather-box img{
     width: 60%;
     margin-top: 30px;
 }
 
-.wheather-box .temperature{
+.weather-box .temperature{
     position: relative;
     color: #06283D;
     font-size: 4rem;
@@ -90,58 +90,58 @@ body{
     margin-left: -16px;
 }
 
-.wheather-box .temperature span{
+.weather-box .temperature span{
     position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;
 }
 
-.wheather-box .description{
+.weather-box .description{
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.wheater-details{
+.weather-details{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.wheater-details .humidity, .wheater-details .wind{
+.weather-details .humidity, .weather-details .wind{
     display: flex;
     align-items: center;
     width: 50%;
     height: 100px;
 }
 
-.wheater-details .humidity{
+.weather-details .humidity{
     padding-left: 20px;
     justify-content: flex-start;
 }
 
-.wheater-details .wind{
+.weather-details .wind{
     padding-right: 20px;
     justify-content: flex-end;
 }
 
-.wheater-details i{
-    color:#06283D;
+.weather-details i{
+    color: #06283D;
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
 }
 
-.wheater-details span{
-    color:#06283D;
+.weather-details span{
+    color: #06283D;
     font-size: 22px;
     font-weight: 500;
 }
 
-.wheater-details p{
-    color:#06283D;
+.weather-details p{
+    color: #06283D;
     font-size: 14px;
     font-weight: 500;
 }
@@ -160,13 +160,13 @@ body{
 }
 
 .not-found p{
-    color:#06283D;
+    color: #06283D;
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
 }
 
-.wheather-box, .wheater-details{
+.weather-box, .weather-details{
     scale: 0;
     opacity: 0;
 }
@@ -177,7 +177,7 @@ body{
 }
 
 @keyframes fadeIn{
-    to{
+    to {
         scale: 1;
         opacity: 1;
     }
